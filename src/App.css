@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgb(71, 69, 69);
+}
+
+.header {
+  background-color: #060707;
+  color: #fff;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  /* margin-bottom: 4rem; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 6rem;
+  overflow-y: auto;
+  background: rgb(71, 69, 69);
+  /* border: 1px solid #060707; */
+}
+
+.chats {
+  overflow-y: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: auto;
+  width: 100%;
+  /* max-width: 40rem; */
+  overflow-y: auto;
+  /* border: 1px solid black; */
+}
+
+.chat_bot, .chat_user {
+  margin: .5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.chat_bot {
+  justify-content: flex-start;
+}
+
+.chat_user {
+  justify-content: flex-end;
+}
+
+.chatting, .uchatting {
+  background: rgba(22,30,58,1);
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  max-width: 60%;
+  font-size: medium;
+}
+
+.bot_img, .user_img {
+  object-fit: cover;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.user_img {
+  margin-left: 1rem;
+}
+
+.bot_img {
+  margin-right: 1rem; 
+}
+
+
+.inp {
+  position:fixed;
+  bottom: 0;
+  left:0;
+  padding: 0rem .5rem;
+  background: rgba(28,30,58,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid#ccc;
+  border-radius: 5rem;
+  margin: 1rem 0rem;
+  width: 100%;
+
+}
+
+.inp input[type="text"] {
+  flex-grow: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.send {
+  background-color: #007bff;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send:hover {
+  background-color: #0056b3;
+}
+
+.sendimg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.inp > input {
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+  color: white;
+}
+
+.inp > input, .send {
+  background: transparent;
+  border: none;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+      padding: 1rem;
+  }
+
+  .chats .chat_user .chatting {
+      max-width: 100%;
+  }
+  .inp {
+      max-width: 100%;
+  }
+}
